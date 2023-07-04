@@ -85,13 +85,10 @@ public class Parent {
         waitUntilVisible(element);
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
     }
-    public List<WebElement> waitVisibleListAllElement(List<WebElement> elemetList){
-        WebDriverWait wait= new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+    public List<WebElement> waitVisibleListAllElement(List<WebElement> elemetList) {
+        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.visibilityOfAllElements(elemetList));
-    }
-    public void actionFunction(WebElement element){
-        Action actions= new Actions(GWD.getDriver());
-        Action action= actions.moveToElement(element)
+        return elemetList;
     }
 
 

@@ -4,8 +4,10 @@ import Utilities.GWD;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import javax.lang.model.element.Element;
@@ -90,11 +92,15 @@ public class Parent {
         wait.until(ExpectedConditions.visibilityOfAllElements(elemetList));
         return elemetList;
     }
-
-    public void dkshf(String dskj){
-
-        System.out.println("jfdsslahgoafd"
-        );
+    public void actionFunction(WebElement element){
+        Actions actions= new Actions(GWD.getDriver());
+        Action action= actions.moveToElement(element).click().build();
+        action.perform();
+    }
+    public void selectFunction(WebElement element, String text){
+        waitUntilVisible(element);
+        Select menu = new Select(element);
+        menu.selectByVisibleText(text);
     }
 
 

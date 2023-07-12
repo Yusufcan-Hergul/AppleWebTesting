@@ -40,7 +40,6 @@ public class GWD {
             switch (browserName) {
                case "chrome":
  //                   System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
-                   
                     WebDriverManager.chromedriver().setup();
                     threadDriver.set(new ChromeDriver());
                     break;

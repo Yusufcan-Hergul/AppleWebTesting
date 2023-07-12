@@ -22,6 +22,38 @@ public class DialogContent extends Parent{
 
 
 
+    @FindBy (css = "button[id='globalnav-menubutton-link-mac']")
+    private WebElement MacHeader;
+
+    @FindBy (css = "li[class='chapternav-item chapternav-item-compare']")
+    private WebElement comparing;
+
+
+    WebElement myElement;
+
+    public void findAndSend(String strElement, String value){
+
+        switch (strElement){
+
+        }
+        sendKeysFunction(myElement, value);
+    }
+    int cntx=0;
+    int cnty=0;
+    public void findAndClick(String strElement){
+
+        switch (strElement){
+            case "anaSayfa" : myElement = myElement = anaSayfa; break;
+
+
+            case "macHeader": myElement = MacHeader; break;
+            case "comparing": myElement = comparing; break;
+
+        }
+        clickFunction(myElement,"mid");
+    }
+
+
 
 
 

@@ -18,7 +18,7 @@ public class DialogContent extends Parent {
     private WebElement anaSayfa;
 
 
-    @FindBy(css = "div[data-analytics-element-engagement='globalnav hover - mac']")
+    @FindBy(xpath = "//a[@class='globalnav-link globalnav-link-apple']")
     private WebElement macHeader;
 
     @FindBy(css = "li[class='chapternav-item chapternav-item-compare']")

@@ -19,6 +19,7 @@ public class LoginStep {
         GWD.getDriver().get("https://www.apple.com/tr/");
         GWD.getDriver().manage().window().maximize();
 
+
     }
 
     @Then("Verify that you are on the rigth site")

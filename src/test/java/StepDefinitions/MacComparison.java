@@ -15,7 +15,7 @@ public class MacComparison {
     WebDriverWait wait= new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
     @When("Click on the Mac Header and comparing")
     public void clickOnTheMacHeaderAndComparing() {
-        dc.findAndClick("MacHeader");
+        dc.findAndClick("macHeader");
         dc.findAndClick("comparing");
     }
 

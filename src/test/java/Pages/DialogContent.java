@@ -42,6 +42,7 @@ public class DialogContent extends Parent {
 
         switch (strElement) {
             case "anaSayfa": myElement = anaSayfa;break;
+
             case "macHeader": myElement = macHeader;break;
             case "comparing": myElement = comparing;break;
 

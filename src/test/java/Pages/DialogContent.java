@@ -18,7 +18,7 @@ public class DialogContent extends Parent {
     private WebElement anaSayfa;
 
 
-    @FindBy(xpath = "//a[@class='globalnav-link globalnav-link-apple']")
+    @FindBy(css = "a[class='globalnav-link globalnav-submenu-trigger-link globalnav-link-mac']")
     private WebElement macHeader;
 
     @FindBy(css = "li[class='chapternav-item chapternav-item-compare']")
@@ -77,7 +77,7 @@ public class DialogContent extends Parent {
     public void specialFindAndClick(String strElement, double scrollingPrecision) {
 
         switch (strElement) {//tam olarak hedefe girmesi için
-            case "anaSayfa": myElement = anaSayfa;break;
+          //  case "anaSayfa": myElement = anaSayfa;break;
         }
         clickFunction(myElement, scrollingPrecision);
     }

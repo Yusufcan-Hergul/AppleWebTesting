@@ -10,8 +10,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import javax.lang.model.element.Element;
-import javax.swing.*;
 import java.time.Duration;
 import java.util.List;
 
@@ -25,30 +23,30 @@ public class Parent {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void scroolToElement(WebElement element){
+    public void scrollToElement(WebElement element){
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scroolIntoView();", element);
     }
 
-    public void scroolDistance(int toWhere){
+    public void scrollDistance(int toWhere){
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
         js.executeScript("window.scrollBy(0,"+toWhere+")");
     }
 
-    public void scroolToElement(WebElement element, String Middle){
+    public void scrollToElement(WebElement element, String Middle){
 
         if (Middle.toLowerCase().contains("mid")){
             JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
 
             String scrollElementIntoMiddle = "var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);"
-                    + "var ElementTop = arguments[0].getBoundingClientRect().top;"
+                    + "var elementTop = arguments[0].getBoundingClientRect().top;"
                     + "window.scrollBy(0, elementTop-(viewPortHeight/2));";
 
             js.executeScript(scrollElementIntoMiddle, element);
         }
     }
 
-    public void scroolToElement(WebElement element, double scrollingPrecision){
+    public void scrollToElement(WebElement element, double scrollingPrecision){
 
         String doubleCevirilmisHali = String.valueOf(scrollingPrecision).replace(".",",");
 
@@ -62,19 +60,19 @@ public class Parent {
     }
 
     public void clickFunction(WebElement element){ //düz tıklama
-        scroolToElement(element);
+        scrollToElement(element);
         waitUntilClickable(element);
         element.click();
     }
 
     public void clickFunction(WebElement element, String Middle){ //ortalayarak tıklama
-        scroolToElement(element, Middle);
+        scrollToElement(element, Middle);
         waitUntilClickable(element);
         element.click();
     }
 
     public void clickFunction(WebElement element, double scrollingPrecision) { //hassas ortalayarak tıklama
-        scroolToElement(element, scrollingPrecision);
+        scrollToElement(element, scrollingPrecision);
         waitUntilClickable(element);
         element.click();
     }
@@ -83,7 +81,7 @@ public class Parent {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
     public void verifyContainsText(WebElement element, String text){
-        scroolToElement(element, "mid");
+        scrollToElement(element, "mid");
         waitUntilVisible(element);
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
     }

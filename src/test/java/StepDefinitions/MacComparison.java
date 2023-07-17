@@ -23,5 +23,10 @@ public class MacComparison {
 
     @And("Select three Mac models through the selector")
     public void selectThreeMacModelsThroughTheSelector() {
+        dc.findAndSelect("leftSelect", "13 inç MacBook Air (M2)");
+        dc.findAndSelect("middleSelect", "13 inç MacBook Air (M2)");
+        dc.findAndSelect("rightSelect","13 inç MacBook Air (M2)");
+
+
     }
 }

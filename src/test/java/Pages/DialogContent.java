@@ -16,13 +16,16 @@ public class DialogContent extends Parent {
 
     @FindBy(css = "a[data-globalnav-item-name='apple']")
     private WebElement anaSayfa;
-
-
     @FindBy(css = "a[class='globalnav-link globalnav-submenu-trigger-link globalnav-link-mac']")
     private WebElement macHeader;
-
     @FindBy(css = "li[class='chapternav-item chapternav-item-compare']")
     private WebElement comparing;
+    @FindBy(css = "select[id='selector-0']")
+    private WebElement leftSelector;
+    @FindBy(css ="select[id='selector-1']")
+    private WebElement middleSelector;
+    @FindBy(css = "select[id='selector-2']")
+    private WebElement rightSelector;
 
 
     WebElement myElement;
@@ -42,7 +45,6 @@ public class DialogContent extends Parent {
 
         switch (strElement) {
             case "anaSayfa": myElement = anaSayfa;break;
-
             case "macHeader": myElement = macHeader;break;
             case "comparing": myElement = comparing;break;
 
@@ -83,6 +85,9 @@ public class DialogContent extends Parent {
     }
        public void findAndSelect(String strElement, String text){
         switch (strElement){
+            case "leftSelect": myElement = leftSelector;break;
+            case "middleSelect": myElement = middleSelector;break;
+            case "rigthSelect": myElement = rightSelector;break;
 
         }
        }

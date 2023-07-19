@@ -26,8 +26,7 @@ public class DialogContent extends Parent {
     private WebElement middleSelector;
     @FindBy(css = "select[id='selector-2']")
     private WebElement rightSelector;
-    @FindBy(css = "")
-    private WebElement JDFASLKDF;
+
 
 
     WebElement myElement;

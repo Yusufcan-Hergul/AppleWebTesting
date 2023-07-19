@@ -28,5 +28,6 @@ public class MacComparison {
         dc.findAndSelect("rightSelect","13 inç MacBook Air (M2)");
 
 
+
     }
 }

@@ -24,6 +24,7 @@ public class DialogContent extends Parent {
     private WebElement leftSelector;
     @FindBy(css ="select[id='selector-1']")
     private WebElement middleSelector;
+
     @FindBy(css = "select[id='selector-2']")
     private WebElement rightSelector;
 
@@ -48,6 +49,7 @@ public class DialogContent extends Parent {
             case "anaSayfa": myElement = anaSayfa;break;
             case "macHeader": myElement = macHeader;break;
             case "comparing": myElement = comparing;break;
+            case " fdhskah" : myElement = comparing;break;
 
         }
         clickFunction(myElement, "mid");
